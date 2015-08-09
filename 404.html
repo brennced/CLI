@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Brennced">
+		<title>CapsLock Indicator</title>
+		<link rel="icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABXV88CVFTNgVBQx+hMTMH+R0e5/0JCsv89Pav/PDyv/z4+vP86Orn/Nja3/zMztf8zM7X+MzO15zMztYEzM7UCWVnQgVZWzP9RUcX/TEy+/0hIt/9DQ6//Pj6o/zk5oP86Oqn/Pj68/zo6uf82Nrf/MzO1/zMztf8zM7X/MzO1gVpa0OdWVsn/UVHC/01Nu/9ISLP/RESs/29vs/+hocX/np7A/2lpsf8+Prz/Ojq5/zY2t/8zM7X/MzO1/zMztehbW87+VlbG/1FRv/9NTbf/Tk6x/8nJ3//+/v7////////////+/v7/xsbi/0FBvP86Orn/Nja3/zMztf8zM7X+WlrK/1ZWw/9RUbv/TU20/7u72f//////+vr9/8vL6v/MzOn/+/v9//////+xsdz/Pj68/zo6uf82Nrf/MzO1/1pax/9VVb//UVG3/0xMsP/u7vT//////6enxf9LS7z/T0/I/7Gx3///////6+v2/0JCvv8+Prz/Ojq5/zY2t/9ZWcP/VVW7/1BQs/9LS6v//Pz9//////90dKb/OTmL/0pKuf9SUsj/WlrI/1hYxv9GRsH/QkK+/z4+vP86Orn/W1vF/1RUt/9PT67/UlKo////////////Zmab/zY2gv8yMnz/SUm2/09PyP9MTMb/SUnD/0ZGwf9CQr7/Pj68/2ho3f9XV7v/TU2p/1JSo////////////2Njlf80NHr/Li5v/ysraf9ISLT/T0/I/0xMxv9JScP/RkbB/0JCvv9ra+L/Z2fd/1JSsP9HR5v//f3+//////9tbZX/MTFy/ysrZv8lJVj/ISFS/0dHsf9PT8j/TEzG/0lJw/9GRsH/bW3k/2tr4v9nZ9z/TEyl//Pz9v//////kZGn/y0taP8nJ1r/jIyW/+Xl5v/Y2OP/UlLK/09PyP9MTMb/SUnD/25u5f9tbeT/a2vi/2dn2//Q0OX//////+3t7/+cnKj/nZ2m//Dw8P//////ycnr/1RUzf9SUsr/T0/I/0xMxv9ubuX+bm7l/21t5P9ra+L/e3vh/+rq+f//////////////////////5+f2/2tr1P9XV8//VFTN/1JSyv9PT8j+bm7l6G5u5f9ubuX/bW3k/2tr4v9vb+H/sbHr/9DQ8f/Pz/D/rq7n/2Rk1v9cXNP/WVnR/1dXz/9UVM3/UlLK525u5YFubuX/bm7l/25u5f9tbeT/a2vi/2lp4P9nZ97/ZWXc/2Nj2v9gYNj/Xl7V/1xc0/9ZWdH/V1fP/1VVzYFubuUCbm7lgW5u5edubuX+bm7l/21t5P9ra+L/aWng/2dn3v9lZdz/Y2Pa/2Bg2P9eXtX+XFzT6FlZ0YFXV88CgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAA==" type="image/x-icon">
+		<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAABXV88CVFTNgVBQx+hMTMH+R0e5/0JCsv89Pav/PDyv/z4+vP86Orn/Nja3/zMztf8zM7X+MzO15zMztYEzM7UCWVnQgVZWzP9RUcX/TEy+/0hIt/9DQ6//Pj6o/zk5oP86Oqn/Pj68/zo6uf82Nrf/MzO1/zMztf8zM7X/MzO1gVpa0OdWVsn/UVHC/01Nu/9ISLP/RESs/29vs/+hocX/np7A/2lpsf8+Prz/Ojq5/zY2t/8zM7X/MzO1/zMztehbW87+VlbG/1FRv/9NTbf/Tk6x/8nJ3//+/v7////////////+/v7/xsbi/0FBvP86Orn/Nja3/zMztf8zM7X+WlrK/1ZWw/9RUbv/TU20/7u72f//////+vr9/8vL6v/MzOn/+/v9//////+xsdz/Pj68/zo6uf82Nrf/MzO1/1pax/9VVb//UVG3/0xMsP/u7vT//////6enxf9LS7z/T0/I/7Gx3///////6+v2/0JCvv8+Prz/Ojq5/zY2t/9ZWcP/VVW7/1BQs/9LS6v//Pz9//////90dKb/OTmL/0pKuf9SUsj/WlrI/1hYxv9GRsH/QkK+/z4+vP86Orn/W1vF/1RUt/9PT67/UlKo////////////Zmab/zY2gv8yMnz/SUm2/09PyP9MTMb/SUnD/0ZGwf9CQr7/Pj68/2ho3f9XV7v/TU2p/1JSo////////////2Njlf80NHr/Li5v/ysraf9ISLT/T0/I/0xMxv9JScP/RkbB/0JCvv9ra+L/Z2fd/1JSsP9HR5v//f3+//////9tbZX/MTFy/ysrZv8lJVj/ISFS/0dHsf9PT8j/TEzG/0lJw/9GRsH/bW3k/2tr4v9nZ9z/TEyl//Pz9v//////kZGn/y0taP8nJ1r/jIyW/+Xl5v/Y2OP/UlLK/09PyP9MTMb/SUnD/25u5f9tbeT/a2vi/2dn2//Q0OX//////+3t7/+cnKj/nZ2m//Dw8P//////ycnr/1RUzf9SUsr/T0/I/0xMxv9ubuX+bm7l/21t5P9ra+L/e3vh/+rq+f//////////////////////5+f2/2tr1P9XV8//VFTN/1JSyv9PT8j+bm7l6G5u5f9ubuX/bW3k/2tr4v9vb+H/sbHr/9DQ8f/Pz/D/rq7n/2Rk1v9cXNP/WVnR/1dXz/9UVM3/UlLK525u5YFubuX/bm7l/25u5f9tbeT/a2vi/2lp4P9nZ97/ZWXc/2Nj2v9gYNj/Xl7V/1xc0/9ZWdH/V1fP/1VVzYFubuUCbm7lgW5u5edubuX+bm7l/21t5P9ra+L/aWng/2dn3v9lZdz/Y2Pa/2Bg2P9eXtX+XFzT6FlZ0YFXV88CgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAA==" type="image/x-icon">
+		<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(function () {
+					$(window).scroll(function () {
+						if ($(this).scrollTop() > 100) {
+							document.getElementById('totop').style.bottom = '15px';
+						} else {
+							document.getElementById('totop').style.bottom = '-50px';
+						}
+					});
+			
+					$('#totop').click(function () {
+						$('body,html').animate({
+							scrollTop: 0
+						}, 500);
+						return false;
+					});
+				});
+			});
+		</script>
+		<style>
+			* {
+				font-family: 'Arial', sans-serif;
+			}
+			.button {
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				-ms-appearance: none;
+				appearance: none;
+				background-color: rgb(186,45,41);
+				background-image: -webkit-linear-gradient(top, rgb(203, 54, 50) 0%, rgb(146, 34, 31) 100%);
+				background-image: -moz-linear-gradient(top, rgb(203, 54, 50) 0%, rgb(146, 34, 31) 100%);
+				background-image: -ms-linear-gradient(top, rgb(203, 54, 50) 0%, rgb(146, 34, 31) 100%);
+				background-image: linear-gradient(rgb(203, 54, 50), rgb(146, 34, 31));
+				border: 1px solid rgb(118, 31, 29);
+				cursor: pointer;
+				border-radius: 5px;
+				font-family: 'Segoe UI', 'Arial', sans-serif;
+				color: white;
+				font-size: 16px;
+				padding: 3px 8px;
+				margin: 0px;
+				box-shadow: 0px 1px 1px rgba(255,255,255,0.33) inset, 0px -1px 1px rgba(0,0,0,0.25) inset;
+				text-decoration: none;
+				text-shadow: 0px 1px 0px rgba(0,0,0,0.33);
+			}
+			button:after {
+				display: none !important;
+			}
+			.button:hover {
+				background-image: -webkit-linear-gradient(left, rgb(214, 89, 86) 0%, rgb(207, 61, 56) 100%);
+				background-image: -moz-linear-gradient(left, rgb(214, 89, 86) 0%, rgb(207, 61, 56) 100%);
+				background-image: -ms-linear-gradient(left, rgb(214, 89, 86) 0%, rgb(207, 61, 56) 100%);
+				background-image: linear-gradient(rgb(214, 89, 86), rgb(207, 61, 56));
+				text-decoration: none !important;
+			}
+			.button:active {
+				background-image: -webkit-linear-gradient(left, rgb(120, 31, 29) 0%, rgb(147, 39, 36) 100%);
+				background-image: -moz-linear-gradient(left, rgb(120, 31, 29) 0%, rgb(147, 39, 36) 100%);
+				background-image: -ms-linear-gradient(left, rgb(120, 31, 29) 0%, rgb(147, 39, 36) 100%);
+				background-image: linear-gradient(rgb(120, 31, 29), rgb(147, 39, 36));
+				box-shadow: 0px -1px 1px rgba(255,255,255,0.2) inset, 0px 1px 1px rgba(0,0,0,0.25) inset;
+			}
+			.small {
+				font-size: 50%;
+			}
+			.semi-small {
+				font-size: 75%;
+			}
+			.smallcaps {
+				font-variant: small-caps;
+			}
+			header {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 64px;
+				line-height: 13px;
+				background-color: rgb(240,240,240);
+				text-align: center;
+				box-shadow: 0px 1px 2px rgba(0,0,0,0.33);
+			}
+			hr.space-top {
+				margin-bottom: 70px;
+			}
+			table#big {
+				width: 100%;
+				table-layout: fixed;
+			}
+			td {
+				vertical-align: top;
+			}
+			a {
+				color: rgb(186,45,41);
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			h3 {
+				margin: 0px;
+				padding: 0px;
+				display: block;
+			}
+			#totop {
+				position: fixed;
+				right: 15px;
+				bottom: -50px;
+				-webkit-transition: bottom 0.3s ease;
+				-moz-transition: bottom 0.3s ease;
+				-ms-transition: bottom 0.3s ease;
+				transition: bottom 0.3s ease;
+			}
+			a[href*="//"]:not([href*="NFB429B.HTML"]):after {
+				content: ' ';
+				display: inline-block;
+				width: 10px;
+				height: 12px;
+				background-image: url(http://i.imgur.com/Izk2LRX.png);
+			}
+			img[onclick*="bigPic"] {
+				cursor: zoom-in;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1><img src="data:image/png;base64,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" style="vertical-align:text-bottom">&nbsp;CapsLock Indicator</h1>
+		</header>
+		<hr class="space-top" id="top"></hr>
+		<table id="big">
+			<tr>
+				<td>
+					<center>
+					  <h2>Thanks for using CapsLock Indicator</h2>
+					  <a href="/CLI/" class="button">Go back</a>
+					  <br /><br />
+					  <span class="semi-small">
+					  	You download is not starting? Click <a href="https://www.dropbox.com/s/tnxdddjlixkt44i/CapsLock%20Indicator.exe?dl=1" target="_blank">here</a>.
+					  </span>
+					</center>
+					<noscript>
+						<a href="#top">Back to top</a>
+					</noscript>
+				</td>
+			</tr>
+		</table>
+		<iframe src="https://www.dropbox.com/s/tnxdddjlixkt44i/CapsLock%20Indicator.exe?dl=1" style="display:none"></iframe>
+		<a id="totop" href="#top" class="button" title="Back to top">&#9650;</a>
+	</body>
+</html>
