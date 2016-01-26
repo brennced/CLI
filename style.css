@@ -102,3 +102,7 @@
 			img[onclick*="bigPic"] {
 				cursor: zoom-in;
 			}
+			.center {
+				text-align: center;
+			}
+			}
